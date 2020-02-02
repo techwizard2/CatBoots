@@ -45,7 +45,7 @@ def start():
     """
     print(json.dumps(data))
     
-    return start_response()
+    return
 
 
 @bottle.post('/move')
