@@ -8,10 +8,7 @@ from api import ping_response, start_response, move_response, end_response
 
 @bottle.route('/')
 def index():
-    return {
-        'color': '#000000',
-        'head': 'fang'
-    }
+
 
 
 @bottle.route('/static/<path:path>')
@@ -45,7 +42,10 @@ def start():
     """
     print(json.dumps(data))
     
-    return
+    return {
+        'color': '#000000',
+        'headType': 'fang'
+    }
 
 
 @bottle.post('/move')
