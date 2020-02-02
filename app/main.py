@@ -6,9 +6,12 @@ import bottle
 from api import ping_response, start_response, move_response, end_response
 
 
-'@bottle.route('/')
-'def index():
-
+@bottle.route('/')
+def index():
+    return '''
+    Battlesnake documentation can be found at
+       <a href="https://docs.battlesnake.com">https://docs.battlesnake.com</a>.
+    '''
 
 
 @bottle.route('/static/<path:path>')
@@ -41,11 +44,11 @@ def start():
             request's data if necessary.
     """
     print(json.dumps(data))
-    
-    return {
-        'color': '#000000',
-        'headType': 'fang'
-    }
+
+    color = "#00FF00"
+    headType = "fang"
+
+    return start_response(color)
 
 
 @bottle.post('/move')
