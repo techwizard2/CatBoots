@@ -48,7 +48,7 @@ def start():
     color = "#00FF00"
     headType = "fang"
 
-    return start_response(color)
+    return start_response(color, headType)
 
 
 @bottle.post('/move')
