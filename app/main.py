@@ -8,10 +8,10 @@ from api import ping_response, start_response, move_response, end_response
 
 @bottle.route('/')
 def index():
-    return '''
-    Battlesnake documentation can be found at
-       <a href="https://docs.battlesnake.com">https://docs.battlesnake.com</a>.
-    '''
+    return {
+        'color': '#000000',
+        'head': 'fang'
+    }
 
 
 @bottle.route('/static/<path:path>')
@@ -44,14 +44,8 @@ def start():
             request's data if necessary.
     """
     print(json.dumps(data))
-
-    color = "#000000"
-    headType = "fang"
-
-    return {
-        color,
-        headType
-    }
+    
+    return start_response()
 
 
 @bottle.post('/move')
