@@ -46,6 +46,7 @@ def start():
     print(json.dumps(data))
 
     color = "#00FF00"
+    headType = "fang"
 
     return start_response(color)
 
