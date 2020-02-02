@@ -7,9 +7,6 @@ def ping_response():
     )
 
 def start_response(color, headType):
-    assert color is str \
-    assert headType is str \
-
     return HTTPResponse(
         status=200,
         headers={

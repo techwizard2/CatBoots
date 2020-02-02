@@ -45,10 +45,10 @@ def start():
     """
     print(json.dumps(data))
 
-    return {
-        'color': '#123456',
-        'headType': 'fang'
-    }
+    color = '#123456'
+    headType = 'fang'
+    
+    return start_response(color, headType)
 
 
 @bottle.post('/move')
