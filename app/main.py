@@ -69,13 +69,13 @@ def move():
         directions['left', 'right']
         direction = random.choice(directions)
     """
-    if head['x'] = 0 and head['y'] = board['height'] - 1:
+    if head['x'] == 0 and head['y'] == board['height'] - 1:
         directions = ['up', 'right']
         direction = random.choice(directions)
-    elif head['x'] = board['width'] and head['y'] = board['height'] - 1:
+    elif head['x'] == board['width'] and head['y'] == board['height'] - 1:
         directions = ['up', 'left']
         direction = random.choice(directions)
-    elif head['x'] = 0 or head['x'] = board['width'] - 1:
+    elif head['x'] == 0 or head['x'] == board['width'] - 1:
         directions = ['up', 'down']
         direction = random.choice(directions)
     else:
