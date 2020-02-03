@@ -38,6 +38,7 @@ def start():
             initialize your snake state here using the
             request's data if necessary.
     """
+
     print(json.dumps(data))
 
     color = '#123456'
@@ -49,6 +50,8 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    board = data['board']
+    you = data['you']
 
     """
     TODO: Using the data from the endpoint request object, your
@@ -57,10 +60,13 @@ def move():
 
     print(json.dumps(data))
 
-    for x in data:
+    for x in you:
         print(json.dumps(x))
-        print(json.dumps(data[x]))
-    
+        print(json.dumps(you[x]))
+
+    for x in board:
+        print(json.dumps(x))
+        print(json.dumps(board[x]))
 
     """
     if data["x"] = 0 and data["y"] > 0:
