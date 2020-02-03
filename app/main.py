@@ -6,7 +6,7 @@ import bottle
 from api import ping_response, start_response, move_response, end_response
 
 @bottle.route('/')
-def index:
+def index():
     return
 
 @bottle.route('/static/<path:path>')
