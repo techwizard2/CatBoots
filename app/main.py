@@ -52,14 +52,13 @@ def move():
     """
     print(json.dumps(data))
 
-    if data["x"] = 0 and y > 0 then (
+    if data["x"] = 0 and y > 0:
         directions['up','down']
         direction = random.choice(directions)
-    ) else (
+    else:
         directions['left', 'right']
         direction = random.choice(directions)
-    )
-    
+
     #directions = ['up', 'down', 'left', 'right']
     #direction = random.choice(directions)
 
