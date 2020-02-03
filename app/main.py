@@ -71,8 +71,8 @@ def move():
 
     for x in you['body']:
         for y in directions:
-            if directions[y]['x'] == you['body'][x]['x'] and directions[y]['y'] == you['body'][x]['y']:
-                choices[directions[y]['name']] = 0
+            if y['x'] == x['x'] and y['y'] == x['y']:
+                choices[y['name']] = 0
 
     directions.clear()
 
