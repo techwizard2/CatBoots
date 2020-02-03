@@ -67,6 +67,8 @@ def move():
     directions = [up, down, left, right]
     choices = {'up': 1, 'down': 1, 'left': 1, 'right': 1}
 
+    print(json.dumps(directions[0]['x']))
+    """
     x = 1
     y = 0
     for x in you['body']:
@@ -80,7 +82,7 @@ def move():
     for key, value in choices.items():
         if value == 1:
             directions.append(key)
-
+"""
     """
     if head['x'] == 0 and head['y'] == board['height'] - 1:
         directions = ['up', 'right']
@@ -95,7 +97,8 @@ def move():
         directions = ['right', 'left']
         direction = random.choice(directions)
     """
-    
+
+    direction = 'left'
     return move_response(direction)
 
 
