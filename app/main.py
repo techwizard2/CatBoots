@@ -69,12 +69,9 @@ def move():
 
     print(json.dumps(directions[0]['x']))
 
-    x = 0
-    y = 0
     for x in you['body']:
         for y in directions:
-            if directions[y]['x'] == you['body'][x]['x'] \
-            and directions[y]['y'] == you['body'][x]['y']:
+            if directions[y]['x'] == you['body'][x]['x'] and directions[y]['y'] == you['body'][x]['y']:
                 choices[directions[y]['name']] = 0
 
     directions.clear()
