@@ -68,6 +68,8 @@ def move():
         print(json.dumps(x))
         print(json.dumps(board[x]))
 
+    print(json.dumps(data[you][body][0][x]))
+
     """
     if data["x"] = 0 and data["y"] > 0:
         directions['up','down']
