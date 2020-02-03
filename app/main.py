@@ -59,20 +59,33 @@ def move():
             snake AI must choose a direction to move in.
     """
 
-    print(json.dumps(data['you']['body'][0]['x']))
-    print(json.dumps(you['body'][0]))
-    """
-    if data["x"] = 0 and data["y"] > 0:
-        directions['up','down']
-        direction = random.choice(directions)
-    else:
-        directions['left', 'right']
-        direction = random.choice(directions)
+    up = {'name': 'up', 'x': head['x'], 'y': head['y'] - 1}
+    down = {'name': 'down', 'x': head['x'], 'y': head['y'] + 1}
+    left = {'name': 'left', 'x': head['x'] - 1, 'y': head['y']}
+    right = {'name': 'right', 'x': head['x'] + 1, 'y': head['y']}
+
+    directions = [up, down, left, right]
+    choices = {'up': 1, 'down': 1, 'left': 1, 'right': 1}
+
+    x = 1
+    y = 0
+    for x in you['body']:
+        for y in directions:
+            if directions[y]['x'] == you['body'][x]['x']
+            and directions[y]['y'] == you['body'][x]['y']:
+                choices[directions[y]['name']] = 0
+
+    directions.clear()
+
+    for key, value in choices.items():
+        if value == 1:
+            directions.append(key)
+
     """
     if head['x'] == 0 and head['y'] == board['height'] - 1:
         directions = ['up', 'right']
         direction = random.choice(directions)
-    elif head['x'] == board['width'] and head['y'] == board['height'] - 1:
+    elif head['x'] == board['width'] - 1 and head['y'] == board['height'] - 1:
         directions = ['up', 'left']
         direction = random.choice(directions)
     elif head['x'] == 0 or head['x'] == board['width'] - 1:
@@ -81,7 +94,8 @@ def move():
     else:
         directions = ['right', 'left']
         direction = random.choice(directions)
-
+    """
+    
     return move_response(direction)
 
 
