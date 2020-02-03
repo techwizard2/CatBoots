@@ -74,7 +74,7 @@ def move():
             if y['x'] == x['x'] and y['y'] == x['y']:
                 choices[y['name']] = 0
 
-    directions.clear()
+    directions = []
 
     for key, value in choices.items():
         if value == 1:
