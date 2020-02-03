@@ -39,7 +39,7 @@ def start():
             request's data if necessary.
     """
 
-    print(json.dumps(data))
+    #print(json.dumps(data))
 
     color = '#123456'
     headType = 'fang'
@@ -68,12 +68,12 @@ def move():
     choices = {'up': 1, 'down': 1, 'left': 1, 'right': 1}
 
     print(json.dumps(directions[0]['x']))
-    """
-    x = 1
+
+    x = 0
     y = 0
     for x in you['body']:
         for y in directions:
-            if directions[y]['x'] == you['body'][x]['x']
+            if directions[y]['x'] == you['body'][x]['x'] \
             and directions[y]['y'] == you['body'][x]['y']:
                 choices[directions[y]['name']] = 0
 
@@ -82,7 +82,7 @@ def move():
     for key, value in choices.items():
         if value == 1:
             directions.append(key)
-"""
+
     """
     if head['x'] == 0 and head['y'] == board['height'] - 1:
         directions = ['up', 'right']
@@ -98,7 +98,7 @@ def move():
         direction = random.choice(directions)
     """
 
-    direction = 'left'
+    direction = random.choice(directions)
     return move_response(direction)
 
 
@@ -110,7 +110,7 @@ def end():
     TODO: If your snake AI was stateful,
         clean up any stateful objects here.
     """
-    print(json.dumps(data))
+    #print(json.dumps(data))
 
     return end_response()
 
