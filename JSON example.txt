@@ -1,0 +1,41 @@
+{
+	"game": {"id": "34328532-d802-417c-a3d8-8dc44ef28d6c"},
+	"turn": 3,
+	"board": {
+		"height": 11, 
+		"width": 11, 
+		"snakes": [
+			{"body": [
+				{"x": 9, "y": 2}, 
+				{"x": 9, "y": 3}, 
+				{"x": 9, "y": 4}
+			], 
+			"id": "gs_8yFYh6gx8ytDCMBjffpdk7wY", 
+			"health": 97, 
+			"name": "faesalm / starterboy"}, 
+			{"body": [
+				{"x": 2, "y": 9}, 
+				{"x": 3, "y": 9}, 
+				{"x": 4, "y": 9}
+			], 
+			"id": "gs_xGHwtcQk9KdScdmXpMBc76Sb", 
+			"health": 97, 
+			"name": "techwizard2 / CatBoots"}
+		], 
+		"food": [
+			{"x": 3, "y": 7}, 
+			{"x": 9, "y": 9}, 
+			{"x": 7, "y": 2}
+		]
+	}, 
+	"you": {
+		"body": [
+			{"x": 2, "y": 9}, 
+			{"x": 3, "y": 9}, 
+			{"x": 4, "y": 9}
+		], 
+		"id": "gs_xGHwtcQk9KdScdmXpMBc76Sb", 
+		"health": 97, 
+		"name": "techwizard2 / CatBoots"
+	}
+}
