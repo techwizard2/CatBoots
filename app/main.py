@@ -5,15 +5,6 @@ import bottle
 
 from api import ping_response, start_response, move_response, end_response
 
-
-@bottle.route('/')
-def index():
-    return '''
-    Battlesnake documentation can be found at
-       <a href="https://docs.battlesnake.com">https://docs.battlesnake.com</a>.
-    '''
-
-
 @bottle.route('/static/<path:path>')
 def static(path):
     """
@@ -39,7 +30,7 @@ def start():
     data = bottle.request.json
 
     """
-    TODO: If you intend to have a stateful snake AI,
+    TODO: If you intend to have a stateful snake AI
             initialize your snake state here using the
             request's data if necessary.
     """
@@ -47,7 +38,7 @@ def start():
 
     color = '#123456'
     headType = 'fang'
-    
+
     return start_response(color, headType)
 
 
@@ -61,8 +52,16 @@ def move():
     """
     print(json.dumps(data))
 
-    directions = ['up', 'down', 'left', 'right']
-    direction = random.choice(directions)
+    if data["x"] = 0 and y > 0 then (
+        directions['up','down']
+        direction = random.choice(directions)
+    ) else (
+        directions['left', 'right']
+        direction = random.choice(directions)
+    )
+    
+    #directions = ['up', 'down', 'left', 'right']
+    #direction = random.choice(directions)
 
     return move_response(direction)
 
