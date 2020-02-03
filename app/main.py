@@ -56,7 +56,9 @@ def move():
     """
 
     print(json.dumps(data))
-    print(json.dumps(data['you'], indent=4, separators=(". ", " = ")))
+
+    for x in data:
+        print(json.dumps(x))
 
     """
     if data["x"] = 0 and data["y"] > 0:
